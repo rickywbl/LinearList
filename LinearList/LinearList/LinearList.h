@@ -1,7 +1,30 @@
-# LinearList
-数据结构线性表学习  自定义数组
+//
+//  LinearList.h
+//  LinearList
+//
+//  Created by Allen on 2017/7/27.
+//  Copyright © 2017年 Allen. All rights reserved.
+//
 
-```
+#ifndef LinearList_h
+#define LinearList_h
+
+#include <stdio.h>
+
+typedef  int  LinearListNodeValue ;
+
+typedef struct {
+
+    int capacity ;  //线性表的容量
+    
+    int length;  //线性表的长度
+    
+    LinearListNodeValue * value;  //节点的数据指针
+    
+    
+}LinearList;
+
+
 //创建线性表
 LinearList * listCreate(int capacity);
 
@@ -33,4 +56,4 @@ void listRemoveObjectWithValue(LinearList * list,LinearListNodeValue value);
 //打印输出
 void listPrint(LinearList * list);
 
-```
+#endif /* LinearList_h */
